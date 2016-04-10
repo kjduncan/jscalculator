@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: gray;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.numbers {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.numberpad, .output {
+  font-family: 'Playfair Display', serif;
+  padding: 0;
+  margin: 0 auto;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.output {
+  font-size: 110px;
+  padding: 0;
+  color: #fff;
+}
+li {
+  height: 15vh;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  font-size: 80px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+li:active {
+  background-color: white;
+
+}
+li:not(:active) {
+  background-color: transparent;
+  transition: background-color 0.4s ease-out;
+}
+.operators {
+  position: absolute;
+  top: 0;
+  right: -64px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  margin: 0;
+  transition: right 0.5s ease-in-out;
+}
+.operators.open {
+  right: 32px;
+}
+.operators li {
+  align-items: center;
+  width: initial;
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  ul {
+    width: 80%;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  ul {
+    width: 90%;
+  }
+}
